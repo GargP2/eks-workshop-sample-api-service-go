@@ -29,7 +29,6 @@ phases:
       - aws eks update-kubeconfig --name $EKS_CLUSTER_NAME
       - kubectl delete -f hello-k8s.yml
       - echo
-      - echo
       - printf '[{"name":"hello-k8s","imageUri":"%s"}]' $REPOSITORY_URI:$TAG > build.json
 artifacts:
   files: build.json
